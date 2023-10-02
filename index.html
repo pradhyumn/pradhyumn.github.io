@@ -56,6 +56,9 @@
             text-align: center;
             border-top: 5px solid #28a745;
         }
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
@@ -68,7 +71,7 @@
         </div>
     </header>
 
-    <nav class="container">
+    <nav class="ontainer sticky-top bg-light">
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="#education">Education</a>
@@ -182,8 +185,30 @@
         <p>&copy; 2023 Pradhyumn Bhale</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>
+        // Add a scroll to top button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('.scrolltop').fadeIn();
+            } else {
+                $('.scrolltop').fadeOut();
+            }
+        });
 
+        // Click event to scroll to top
+        $('.scrolltop').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scrolltop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 </body>
 
 </html>
